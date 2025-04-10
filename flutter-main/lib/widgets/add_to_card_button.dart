@@ -30,7 +30,7 @@ class AddToCartButton extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(width: 8), // مساحة بين النص والسهم
+              SizedBox(width: 8), 
               Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,

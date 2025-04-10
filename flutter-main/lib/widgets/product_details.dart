@@ -41,7 +41,7 @@ class ProductDetails extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             description,
-            style: const TextStyle(fontSize: 16, color: Colors.grey),
+            style: const TextStyle(fontSize: 15, color: Color.fromARGB(255, 0, 0, 0)),
           ),
           const SizedBox(height: 16),
           GestureDetector(
@@ -71,38 +71,42 @@ class ProductDetails extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
+
+          const Divider(color: Colors.grey, thickness: 1),
+          const SizedBox(height: 16),
           const ColorOptions(),
           const SizedBox(height: 16),
-          Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  children: [
-    RichText(
-      text: TextSpan(
-        style: const TextStyle(
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-        ),
-        children: [
-          TextSpan(
-            text: price.toString().split('.')[0], // الجزء الصحيح
-            style: const TextStyle(fontSize: 28), 
-          ),
-          TextSpan(
-            text: '.${price.toString().split('.')[1]}', // الجزء العشري
-            style: const TextStyle(
-              fontSize: 20, 
-              fontWeight: FontWeight.bold, 
-              color: Colors.black54, 
-            ),
-          ),
-        ],
-      ),
-    ),
-    const AddToCartButton(),
-  ],
-)
 
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              RichText(
+                text: TextSpan(
+                  style: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: price.toString().split('.')[0], // الجزء الصحيح
+                      style: const TextStyle(fontSize: 28),
+                    ),
+                    TextSpan(
+                      text:
+                          '.${price.toString().split('.')[1]}', // الجزء العشري
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black54,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const AddToCartButton(),
+            ],
+          ),
         ],
       ),
     );
